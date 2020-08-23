@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#39aed1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Medicare"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="#fff" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="59dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@mipmap/heart" />
+
+
+    </RelativeLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/drug_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="8dp"
+        android:lineHeight="100dp"
+        android:background="@drawable/edittext"
+        android:completionThreshold="1"
+        android:hint="Enter your drug names..."
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145"
+        tools:layout_editor_absoluteX="16dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/adddrugs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button"
+            android:onClick="addDrugs"
+            android:text="add drug"
+            android:layout_weight="0.5"
+            android:textColor="#fff" />
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:onClick="fetchPharamacydetails"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:text="submit"
+            android:layout_weight="0.5"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="Selected Drugs"
+        android:textSize="18sp"
+        android:padding="6dp"
+        android:textStyle="bold"
+        />
+
+    <ListView
+        android:id="@+id/simpleListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="8dp"
+        android:dividerHeight="1dp" />
+</LinearLayout>
